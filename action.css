@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#character {
+    width: 50px;
+    height: 50px;
+    background: url('character.png') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 275px;
+    left: 275px;
+    transition: all 0.1s ease;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background: url('heart.png') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    transition: all 0.5s ease;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+#message {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
